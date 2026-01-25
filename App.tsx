@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,10 +9,8 @@ import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Education from './components/Education';
 import Footer from './components/Footer';
-import { personalInfo } from './constants';
 
 const App: React.FC = () => {
-    const sectionsRef = useRef<HTMLElement[]>([]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(

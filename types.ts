@@ -1,11 +1,15 @@
 
+import React from 'react';
+
 export interface Skill {
   name: string;
+  icon: React.FC<{ className?: string }>;
 }
 
 export interface SkillCategory {
   title: string;
-  icon: React.FC<{ className?: string }>;
+  description?: string;
+  icon?: React.FC<{ className?: string }>;
   skills: Skill[];
 }
 
@@ -28,6 +32,8 @@ export interface EducationItem {
 export interface Project {
   title: string;
   description: string;
+  tags: string[];
+  icon: React.FC<{ className?: string }>;
 }
 
 export interface Certification {

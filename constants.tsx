@@ -1,17 +1,17 @@
 
-import React from 'react';
 import type { SkillCategory, ExperienceItem, Project, Certification, EducationItem } from './types';
+import * as SkillIcons from './components/SkillIcons';
 
 export const personalInfo = {
     name: "Sumit Kumawat",
-    title: "IT Infrastructure & Cybersecurity Engineer",
+    title: "Senior IT Infrastructure & Cybersecurity Engineer",
     location: "Pune, India",
     email: "kumawatsumit45@gmail.com",
     phone: "+91 750 751 2005",
     linkedin: "https://www.linkedin.com/in/sumit-kumawat-infosec/",
     github: "https://github.com/sumit-kumawat",
     imageUrl: "https://cdn.conzex.com/files/profile-icon/1721097078045.jpeg",
-    summary: "IT Infrastructure & Cybersecurity Engineer with 4+ years of experience in system administration, virtualization, cloud, and security operations. Skilled in Windows Server, Linux, VMware, Hyper-V, Nutanix, SIEM, endpoint security, and cloud platforms. Experienced in incident response, threat monitoring, log analysis, regex parsers, and IT automation.",
+    summary: "Senior IT Infrastructure & Cybersecurity Engineer with extensive virtualization experience and a proven track record in designing cloud solutions. Expert in managing Microsoft Windows Server ecosystems (2012–2025), Microsoft Exchange 2016, and complex shared network storage environments. Proficient in VMware, KVM, and open-source technologies, delivering comprehensive upgrades and optimization for diverse application landscapes.",
 };
 
 export const navLinks = [
@@ -30,57 +30,50 @@ export const Icons = {
   Location: ({ className = 'h-5 w-5' }: { className?: string }) => <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>,
   Briefcase: ({ className = 'h-6 w-6' }: { className?: string }) => <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>,
   Check: ({ className = 'h-5 w-5 text-primary' }: { className?: string }) => <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>,
-  Security: ({ className = 'h-6 w-6' }: { className?: string }) => <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
-  Networking: ({ className = 'h-6 w-6' }: { className?: string }) => <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9M3 12a9 9 0 019-9m-9 9a9 9 0 009 9m-9-9h18" /></svg>,
-  Server: ({ className = 'h-6 w-6' }: { className?: string }) => <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>,
-  Code: ({ className = 'h-6 w-6' }: { className?: string }) => <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>,
-  Cloud: ({ className = 'h-6 w-6' }: { className?: string }) => <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>,
   Signature: ({ className = 'w-48 text-secondary' }: { className?: string }) => <div className={`font-signature text-6xl ${className}`}>Sumit K.</div>
 };
 
 
 export const skillCategories: SkillCategory[] = [
     {
-        title: "Security & Threat Management",
-        icon: Icons.Security,
+        title: "Virtualization & Cloud",
+        description: "Implementing robust virtualization strategies to maximize resource efficiency and ensure business continuity.",
         skills: [
-            { name: "CrowdStrike Falcon" }, { name: "AlienVault OSSIM" }, { name: "Wazuh SIEM" },
-            { name: "Incident Response" }, { name: "Threat Detection" }, { name: "Regex Parsers" },
-            { name: "Vulnerability Assessment" }
-        ],
+            { name: "VMware vSphere", icon: SkillIcons.VMware },
+            { name: "KVM", icon: SkillIcons.KVM },
+            { name: "Hyper-V", icon: SkillIcons.HyperV },
+            { name: "Nutanix AHV", icon: SkillIcons.Nutanix },
+            { name: "AWS", icon: SkillIcons.AWS },
+            { name: "Azure", icon: SkillIcons.Azure },
+            { name: "Docker", icon: SkillIcons.Docker },
+            { name: "cPanel", icon: SkillIcons.CPanel },
+            { name: "JetBackup", icon: SkillIcons.JetBackup }
+        ]
     },
     {
-        title: "Networking & Security Tools",
-        icon: Icons.Networking,
+        title: "Server & Network Infrastructure",
+        description: "Designing and maintaining secure, high-uptime server ecosystems (99.9%) and shared storage solutions.",
         skills: [
-            { name: "pfSense" }, { name: "KerioControl" }, { name: "Cisco Switches" },
-            { name: "VPN" }, { name: "VLAN" }, { name: "NAT" }, { name: "SSL/TLS Hardening" },
-            { name: "Reverse Proxy" }, { name: "FTP/HTTP/SSH/SMB/LDAP" }
-        ],
+            { name: "Windows Server", icon: SkillIcons.Windows },
+            { name: "Exchange 2016", icon: SkillIcons.MicrosoftExchange },
+            { name: "Linux", icon: SkillIcons.Linux },
+            { name: "Active Directory", icon: SkillIcons.Server },
+            { name: "Cisco", icon: SkillIcons.Cisco },
+            { name: "pfSense", icon: SkillIcons.Shield },
+            { name: "Shared Storage", icon: SkillIcons.Network },
+            { name: "Imunify360", icon: SkillIcons.Imunify },
+            { name: "Wazuh", icon: SkillIcons.Wazuh }
+        ]
     },
     {
-        title: "Systems & Virtualization",
-        icon: Icons.Server,
+        title: "Security & Risk Management",
+        description: "Deploying advanced threat detection and automation to reduce risk and harden endpoint security.",
         skills: [
-            { name: "Windows Server 2012–2025" }, { name: "Active Directory" }, { name: "Exchange 2016/2019" },
-            { name: "Failover Clusters" }, { name: "VMware vSphere/ESXi/vCenter" }, { name: "Nutanix AHV & Prism" },
-            { name: "Hyper-V" }, { name: "Linux" }
-        ],
-    },
-    {
-        title: "Automation & Development",
-        icon: Icons.Code,
-        skills: [
-            { name: "PowerShell" }, { name: "PowerCLI" }, { name: "Shell Scripting" }, { name: "Docker" },
-            { name: "Docker-Compose" }, { name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }, { name: "PHP" }
-        ],
-    },
-    {
-        title: "Cloud Platforms",
-        icon: Icons.Cloud,
-        skills: [
-            { name: "AWS (EC2, IAM, S3, RDS, VPC, Lambda)" }, { name: "Azure (VMs, AD, NSG, Monitoring)" },
-            { name: "IIS" }, { name: "Apache" }, { name: "Tomcat" }, { name: "WHM/cPanel" }
+            { name: "CrowdStrike", icon: SkillIcons.CrowdStrike },
+            { name: "PowerShell", icon: SkillIcons.PowerShell },
+            { name: "Bash Scripting", icon: SkillIcons.Code },
+            { name: "HTML/CSS/JS", icon: SkillIcons.Code },
+            { name: "SSL/TLS", icon: SkillIcons.Shield }
         ],
     },
 ];
@@ -92,13 +85,13 @@ export const experience: ExperienceItem[] = [
         role: "Associate Platform System Administrator",
         period: "Jan 2022 – Present",
         points: [
-            "Deployed and maintained enterprise security tools, firewalls, and endpoint protection in collaboration with SOC.",
-            "Automated VM lifecycle operations (deployments, snapshots, migrations, NIC configs) using PowerShell & PowerCLI, reducing manual work by >50%.",
-            "Managed and secured Windows Server, AD, Exchange, DNS/LDAP, Failover Clusters across hybrid environments.",
-            "Implemented log monitoring, custom regex parsers, alerts, and dashboards in SIEM platforms to detect and respond to threats.",
-            "Configured and hardened IIS, Apache, and Docker environments with SSL/TLS and reverse proxy.",
-            "Participated in incident response & break/fix situations, analyzing root cause and implementing preventive measures.",
-            "Developed internal dashboards and security automation scripts (HTML, CSS, JS, PHP) improving operational visibility."
+            "Executed comprehensive upgrades across 182+ server instances, improving performance and security posture in all aspects of the infrastructure.",
+            "Architected and maintained Hybrid Cloud solutions integrating AWS, Azure, and on-premise Virtualization (VMware/KVM).",
+            "Managed Shared Network Storage environments, optimizing data flow and redundancy using VASA and high-performance specs.",
+            "Automated VM lifecycle operations and deployment options for both monolithic and microservices applications using PowerShell & PowerCLI.",
+            "Administered Microsoft Windows Server (2016-2025) and Microsoft Exchange 2016 ecosystems, ensuring 99.9% uptime.",
+            "Implemented security hardening for Client OS and server endpoints, integrating open-source security tools with enterprise SIEM.",
+            "Collaborated on evaluating hardware specs and software options for future-proof infrastructure procurement."
         ]
     },
     {
@@ -107,10 +100,10 @@ export const experience: ExperienceItem[] = [
         role: "System Administrator",
         period: "Jul 2021 – Dec 2021",
         points: [
-            "Administered AlienVault OSSIM for threat detection and log analysis.",
-            "Managed firewalls and VPNs (KerioControl, pfSense).",
-            "Maintained Windows Server, Exchange, IIS, and backups using Veeam.",
-            "Managed Hyper-V environments for virtual machine deployment."
+            "Administered Virtualization platforms including Hyper-V and KVM for diverse development environments.",
+            "Managed firewalls and VPNs (KerioControl, pfSense) to secure shared network resources.",
+            "Maintained Windows Server, Exchange, IIS, and backups using Veeam and open standards.",
+            "Provided extensive support for Client OS (Windows/Linux) and endpoint security."
         ]
     }
 ];
@@ -127,24 +120,34 @@ export const education: EducationItem[] = [
 
 export const projects: Project[] = [
     {
-        title: "Automated Docker Installation Scripts",
-        description: "Developed scripts for automated Docker installation on both Windows & Linux servers, streamlining environment setup."
+        title: "Enterprise Infrastructure Modernization",
+        description: "Led a major upgrade initiative across 182+ servers, migrating legacy systems to modern Windows Server 2022 and virtualized environments.",
+        icon: SkillIcons.Icons8Server,
+        tags: ["Windows Server 2022", "Migration", "Virtualization"]
+    },
+    {
+        title: "Automated Docker & Cloud Deployment",
+        description: "Developed scripts for automated Docker installation and cloud resource provisioning on both Windows & Linux servers.",
+        icon: SkillIcons.Icons8Cloud,
+        tags: ["Docker", "Automation", "Cloud Ops", "Linux"]
     },
     {
         title: "Custom SIEM Parsers & Alerts",
-        description: "Built custom SIEM parsers and security alerts for enhanced threat monitoring and faster detection."
+        description: "Built custom SIEM parsers and security alerts for enhanced threat monitoring and faster detection.",
+        icon: SkillIcons.Icons8Security,
+        tags: ["SIEM", "Cybersecurity", "Threat Detection"]
     },
     {
-        title: "BMC R&R Awards: FY25-Q2 & FY23-Q3",
-        description: "Recognized for outstanding contributions to IT automation infrastructure management."
+        title: "Storage Optimization Project",
+        description: "Implemented VASA and shared network storage solutions to optimize virtual machine performance and backup efficiency.",
+        icon: SkillIcons.Icons8Storage,
+        tags: ["VASA", "SAN/NAS", "Backup Strategy"]
     },
     {
-        title: "Security Research: Net Protector Antivirus",
-        description: "Identified and reported XSS vulnerability in 2021 and an SQL Injection vulnerability in Admin Console in 2023."
-    },
-    {
-        title: "Security Flaw Discovery",
-        description: "Discovered and reported a security flaw in the Pune Police website in 2020, contributing to public digital safety."
+        title: "Security Research & Vulnerability Discovery",
+        description: "Identified critical vulnerabilities (XSS, SQL Injection) in commercial antivirus software and public sector web portals.",
+        icon: SkillIcons.Icons8Bug,
+        tags: ["Vulnerability Assessment", "XSS", "SQLi", "Research"]
     }
 ];
 
