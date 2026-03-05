@@ -5,7 +5,31 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sumit Kumawat | Portfolio</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Sumit Kumawat | Senior IT Infrastructure & Cybersecurity Engineer</title>
+    <meta name="title" content="Sumit Kumawat | Senior IT Infrastructure & Cybersecurity Engineer">
+    <meta name="description" content="Portfolio of Sumit Kumawat, an expert in IT Infrastructure, Virtualization, Cloud Solutions, and Enterprise Security based in Pune, India.">
+    <meta name="keywords" content="Sumit Kumawat, Cybersecurity Engineer, IT Infrastructure, VMware, Cloud Computing, System Administrator, Network Security, Pune, DevOps">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Sumit Kumawat">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sumitkumawat.com/">
+    <meta property="og:title" content="Sumit Kumawat | Senior IT Infrastructure & Cybersecurity Engineer">
+    <meta property="og:description" content="Senior IT Infrastructure & Cybersecurity Engineer with extensive virtualization experience and a proven track record in designing cloud solutions.">
+    <meta property="og:image" content="https://cdn.conzex.com/files/profile-icon/1721097078045.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sumitkumawat.com/">
+    <meta property="twitter:title" content="Sumit Kumawat | Senior IT Infrastructure & Cybersecurity Engineer">
+    <meta property="twitter:description" content="Senior IT Infrastructure & Cybersecurity Engineer with extensive virtualization experience and a proven track record in designing cloud solutions.">
+    <meta property="twitter:image" content="https://cdn.conzex.com/files/profile-icon/1721097078045.jpeg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,12 +67,17 @@
             },
             animation: {
               'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
             },
             keyframes: {
               fadeInUp: {
                 '0%': { opacity: '0', transform: 'translateY(20px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
               },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
             },
           }
         }
@@ -77,7 +106,7 @@
 }
 </script>
 </head>
-  <body class="bg-neutral-50 text-secondary font-sans">
+  <body class="bg-neutral-50 text-secondary font-sans selection:bg-primary/20 selection:text-primary">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
