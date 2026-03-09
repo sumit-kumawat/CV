@@ -8,7 +8,7 @@ const About: React.FC = () => {
     <Section id="about" title="About Me" className="bg-white relative overflow-hidden">
       <div className="max-w-5xl mx-auto relative z-10">
         <div 
-          className="bg-neutral-50/50 backdrop-blur-xl p-10 md:p-20 rounded-[4rem] border border-neutral-100 shadow-2xl relative overflow-hidden group"
+          className="bg-neutral-50/50 backdrop-blur-xl p-10 md:p-20 rounded-3xl border border-neutral-100 shadow-2xl relative overflow-hidden group"
         >
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
           

@@ -48,22 +48,46 @@ const Footer: React.FC = () => {
             className="space-y-8"
           >
             <h4 className="text-sm font-black text-primary tracking-[0.3em] uppercase">Connect</h4>
-            <div className="flex justify-center md:justify-start gap-6">
+            <div className="flex justify-center md:justify-start gap-4 flex-wrap">
               <a 
                 href={personalInfo.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-14 h-14 bg-neutral-800 rounded-2xl flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl"
+                className="w-12 h-12 bg-neutral-800 rounded-xl flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl"
               >
-                <Icons.LinkedIn className="w-8 h-8" />
+                <Icons.LinkedIn className="w-6 h-6" />
               </a>
               <a 
                 href={personalInfo.github} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-14 h-14 bg-neutral-800 rounded-2xl flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl"
+                className="w-12 h-12 bg-neutral-800 rounded-xl flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl"
               >
-                <Icons.GitHub className="w-8 h-8" />
+                <Icons.GitHub className="w-6 h-6" />
+              </a>
+              <a 
+                href={personalInfo.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-12 h-12 bg-neutral-800 rounded-xl flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl"
+              >
+                <Icons.Instagram className="w-6 h-6" />
+              </a>
+              <a 
+                href={personalInfo.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-12 h-12 bg-neutral-800 rounded-xl flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl"
+              >
+                <Icons.Facebook className="w-6 h-6" />
+              </a>
+              <a 
+                href={personalInfo.twitter} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-12 h-12 bg-neutral-800 rounded-xl flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl"
+              >
+                <Icons.Twitter className="w-6 h-6" />
               </a>
             </div>
           </div>

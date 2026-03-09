@@ -11,7 +11,7 @@ const Certifications: React.FC = () => {
         {certifications.map((cert, index) => (
           <div 
             key={index} 
-            className="group relative bg-white/40 backdrop-blur-xl p-10 rounded-[3rem] border border-white/30 shadow-2xl hover:shadow-primary/10 transition-all duration-500 overflow-hidden perspective-1000"
+            className="group relative bg-white/40 backdrop-blur-xl p-10 rounded-3xl border border-white/30 shadow-2xl hover:shadow-primary/10 transition-all duration-500 overflow-hidden perspective-1000"
           >
             {/* Background Decoration */}
             <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-15 transition-all duration-700 transform group-hover:scale-125 group-hover:rotate-12">
@@ -20,7 +20,7 @@ const Certifications: React.FC = () => {
 
             <div className="relative z-10 flex flex-col h-full">
                 <div 
-                  className="w-20 h-20 mb-8 p-4 bg-white rounded-3xl shadow-xl border border-neutral-100 flex items-center justify-center group-hover:border-primary/30 transition-all duration-300"
+                  className="w-20 h-20 mb-8 p-4 bg-white rounded-2xl shadow-xl border border-neutral-100 flex items-center justify-center group-hover:border-primary/30 transition-all duration-300"
                 >
                     <Icons8Badge className="w-full h-full object-contain filter drop-shadow-md" />
                 </div>

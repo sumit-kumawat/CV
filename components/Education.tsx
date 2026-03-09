@@ -11,7 +11,7 @@ const Education: React.FC = () => {
     <Section id="education" title="Education" className="bg-white relative overflow-hidden">
       <div className="max-w-5xl mx-auto relative z-10">
         <div 
-          className="group relative bg-white/40 backdrop-blur-xl p-8 md:p-16 rounded-[4rem] border border-white/30 shadow-2xl hover:shadow-primary/10 transition-all duration-500 overflow-hidden perspective-1000"
+          className="group relative bg-white/40 backdrop-blur-xl p-8 md:p-16 rounded-3xl border border-white/30 shadow-2xl hover:shadow-primary/10 transition-all duration-500 overflow-hidden perspective-1000"
         >
             
             {/* Decorative Background Elements */}

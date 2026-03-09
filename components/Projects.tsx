@@ -6,13 +6,13 @@ import type { Project } from '../types';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
   <div 
-    className="group bg-white/40 backdrop-blur-md rounded-[2.5rem] p-8 shadow-xl border border-white/20 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 flex flex-col h-full relative overflow-hidden perspective-1000"
+    className="group bg-white/40 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-white/20 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 flex flex-col h-full relative overflow-hidden perspective-1000"
   >
     {/* Top colored accent */}
     <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary/40 via-primary to-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     
     <div className="mb-8 flex items-start justify-between">
-        <div className="w-20 h-20 bg-white rounded-3xl p-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg border border-neutral-100 group-hover:border-primary/20">
+        <div className="w-20 h-20 bg-white rounded-2xl p-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg border border-neutral-100 group-hover:border-primary/20">
             <project.icon className="w-full h-full object-contain filter drop-shadow-md" />
         </div>
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-4 group-hover:translate-x-0">

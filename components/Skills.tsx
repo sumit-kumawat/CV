@@ -21,7 +21,7 @@ const Skills: React.FC = () => {
             {skillCategories.map((category) => (
               <div 
                 key={category.title}
-                className="bg-white/60 backdrop-blur-xl rounded-[2.5rem] shadow-2xl border border-white/20 p-8 md:p-12 relative overflow-hidden group"
+                className="bg-white/60 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-8 md:p-12 relative overflow-hidden group"
               >
                 <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500"></div>
                 
@@ -34,7 +34,7 @@ const Skills: React.FC = () => {
                   {category.skills.map((skill) => (
                     <div 
                       key={skill.name}
-                      className="group flex flex-col items-center p-6 rounded-3xl bg-neutral-50/50 border border-neutral-100/50 hover:bg-white hover:shadow-2xl hover:border-primary/20 transition-all duration-300 cursor-default"
+                      className="group flex flex-col items-center p-6 rounded-2xl bg-neutral-50/50 border border-neutral-100/50 hover:bg-white hover:shadow-2xl hover:border-primary/20 transition-all duration-300 cursor-default"
                     >
                       <div className="w-16 h-16 mb-4 flex items-center justify-center filter drop-shadow-lg group-hover:drop-shadow-2xl transition-all duration-300">
                          <skill.icon className="w-full h-full object-contain" />

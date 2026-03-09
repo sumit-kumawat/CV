@@ -47,12 +47,21 @@ const Hero: React.FC = () => {
                   Download CV
                 </a>
                 
-                <div className="flex space-x-6">
-                    <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 hover:-translate-y-2 transition-all duration-300">
-                        <Icons.LinkedIn className="h-12 w-12" />
+                <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                        <Icons.LinkedIn className="h-10 w-10" />
                     </a>
-                    <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 hover:-translate-y-2 transition-all duration-300">
-                        <Icons.GitHub className="h-12 w-12" />
+                    <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                        <Icons.GitHub className="h-10 w-10" />
+                    </a>
+                    <a href={personalInfo.instagram} target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                        <Icons.Instagram className="h-10 w-10" />
+                    </a>
+                    <a href={personalInfo.facebook} target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                        <Icons.Facebook className="h-10 w-10" />
+                    </a>
+                    <a href={personalInfo.twitter} target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                        <Icons.Twitter className="h-10 w-10" />
                     </a>
                 </div>
             </div>
@@ -60,12 +69,12 @@ const Hero: React.FC = () => {
           
           <div className="md:w-2/5 flex justify-center">
             <div className="relative w-72 h-72 md:w-96 md:h-96 group">
-              <div className="absolute inset-0 bg-primary rounded-[3rem] opacity-20 blur-3xl group-hover:opacity-40 transition-opacity duration-500"></div>
-              <div className="absolute -inset-4 bg-gradient-to-tr from-primary to-primary-light rounded-[3rem] opacity-10 group-hover:opacity-20 transition-opacity duration-500 animate-pulse"></div>
+              <div className="absolute inset-0 bg-primary rounded-3xl opacity-20 blur-3xl group-hover:opacity-40 transition-opacity duration-500"></div>
+              <div className="absolute -inset-4 bg-gradient-to-tr from-primary to-primary-light rounded-3xl opacity-10 group-hover:opacity-20 transition-opacity duration-500 animate-pulse"></div>
               <img 
                 src={personalInfo.imageUrl} 
                 alt={personalInfo.name} 
-                className="relative w-full h-full object-cover rounded-[3rem] shadow-2xl border-8 border-white/50 backdrop-blur-sm transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3"
+                className="relative w-full h-full object-cover rounded-3xl shadow-2xl border-8 border-white/50 backdrop-blur-sm transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3"
               />
             </div>
           </div>

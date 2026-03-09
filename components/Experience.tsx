@@ -21,7 +21,7 @@ const Experience: React.FC = () => {
                 
                 {/* Timeline Icon Marker */}
                 <div 
-                  className="absolute left-8 md:left-1/2 w-16 h-16 bg-white border-4 border-primary/20 rounded-3xl shadow-2xl flex items-center justify-center transform -translate-x-1/2 md:translate-x-[-50%] z-20 group-hover:border-primary transition-colors duration-300"
+                  className="absolute left-8 md:left-1/2 w-16 h-16 bg-white border-4 border-primary/20 rounded-2xl shadow-2xl flex items-center justify-center transform -translate-x-1/2 md:translate-x-[-50%] z-20 group-hover:border-primary transition-colors duration-300"
                 >
                     <Icons8Work className="w-8 h-8" />
                 </div>
@@ -38,7 +38,7 @@ const Experience: React.FC = () => {
                 {/* Content Card */}
                 <div className="w-full md:w-1/2 pl-24 md:pl-0 md:px-16">
                    <div 
-                     className="bg-white/40 backdrop-blur-xl p-8 md:p-10 rounded-[3rem] shadow-2xl border border-white/30 hover:shadow-primary/10 transition-all duration-500 relative overflow-hidden group-hover:border-primary/20"
+                     className="bg-white/40 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-2xl border border-white/30 hover:shadow-primary/10 transition-all duration-500 relative overflow-hidden group-hover:border-primary/20"
                    >
                       {/* Decorative gradient blob */}
                       <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500"></div>

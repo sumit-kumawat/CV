@@ -31,7 +31,7 @@ export const AWS = ({ className }: { className?: string }) => (
 );
 
 export const Azure = ({ className }: { className?: string }) => (
-  <RemoteIcon src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/1024px-Microsoft_Azure_Logo.svg.png" alt="Azure" className={className} />
+  <RemoteIcon src="https://img.icons8.com/?size=100&id=VLKafOkk3sBX" alt="Azure" className={className} />
 );
 
 export const Docker = ({ className }: { className?: string }) => (
@@ -55,7 +55,7 @@ export const MicrosoftExchange = ({ className }: { className?: string }) => (
 );
 
 export const Linux = ({ className }: { className?: string }) => (
-  <RemoteIcon src="https://cdn.iconscout.com/icon/free/png-256/free-linux-logo-icon-svg-download-png-2944967.png" alt="Linux" className={className} />
+  <RemoteIcon src="https://img.icons8.com/?size=100&id=HF4xGsjDERHf" alt="Linux" className={className} />
 );
 
 export const Server = ({ className }: { className?: string }) => (
@@ -121,23 +121,23 @@ export const JetBackupIcon = ({ className }: { className?: string }) => (
 // --- Icons8 Fluency Icons for Aesthetic Enhancements ---
 
 export const Icons8Server = ({ className }: { className?: string }) => (
-    <img src="https://img.icons8.com/fluency/96/server.png" alt="Server" className={className} referrerPolicy="no-referrer" />
+    <img src="https://img.icons8.com/?size=100&id=jDxcFpRjY4iu" alt="Server" className={className} referrerPolicy="no-referrer" />
 );
 
 export const Icons8Cloud = ({ className }: { className?: string }) => (
-    <img src="https://img.icons8.com/fluency/96/cloud-computing.png" alt="Cloud" className={className} referrerPolicy="no-referrer" />
+    <img src="https://img.icons8.com/?size=100&id=FLqnkaHTIYwU" alt="Cloud" className={className} referrerPolicy="no-referrer" />
 );
 
 export const Icons8Security = ({ className }: { className?: string }) => (
-    <img src="https://img.icons8.com/fluency/96/security-shield-green.png" alt="Security" className={className} referrerPolicy="no-referrer" />
+    <img src="https://img.icons8.com/?size=100&id=OvVEbsERQxkM" alt="Security" className={className} referrerPolicy="no-referrer" />
 );
 
 export const Icons8Storage = ({ className }: { className?: string }) => (
-    <img src="https://img.icons8.com/fluency/96/data-storage-network.png" alt="Storage" className={className} referrerPolicy="no-referrer" />
+    <img src="https://img.icons8.com/?size=100&id=11873" alt="Storage" className={className} referrerPolicy="no-referrer" />
 );
 
 export const Icons8Bug = ({ className }: { className?: string }) => (
-    <img src="https://img.icons8.com/fluency/96/bug.png" alt="Vulnerability" className={className} referrerPolicy="no-referrer" />
+    <img src="https://img.icons8.com/?size=100&id=RYJuBLO3YDl5" alt="Vulnerability" className={className} referrerPolicy="no-referrer" />
 );
 
 export const Icons8Work = ({ className }: { className?: string }) => (
@@ -182,4 +182,16 @@ export const Icons8Location = ({ className }: { className?: string }) => (
 
 export const Icons8Badge = ({ className }: { className?: string }) => (
     <img src="https://img.icons8.com/fluency/96/guarantee.png" alt="Badge" className={className} referrerPolicy="no-referrer" />
+);
+
+export const Icons8Instagram = ({ className }: { className?: string }) => (
+    <img src="https://img.icons8.com/fluency/96/instagram-new.png" alt="Instagram" className={className} referrerPolicy="no-referrer" />
+);
+
+export const Icons8Facebook = ({ className }: { className?: string }) => (
+    <img src="https://img.icons8.com/fluency/96/facebook-new.png" alt="Facebook" className={className} referrerPolicy="no-referrer" />
+);
+
+export const Icons8Twitter = ({ className }: { className?: string }) => (
+    <img src="https://img.icons8.com/fluency/96/twitter.png" alt="Twitter" className={className} referrerPolicy="no-referrer" />
 );

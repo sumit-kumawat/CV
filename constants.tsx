@@ -5,11 +5,14 @@ import * as SkillIcons from './components/SkillIcons';
 export const personalInfo = {
     name: "Sumit Kumawat",
     title: "Senior IT Infrastructure & Cybersecurity Engineer",
-    location: "Pune, India",
-    email: "kumawatsumit45@gmail.com",
+    location: "D-403 Atulya Nirman, Punawale, Pune (MH), INDIA - 411033",
+    email: "hello@sumitkumawat.com",
     phone: "+91 750 751 2005",
-    linkedin: "https://www.linkedin.com/in/sumit-kumawat-infosec/",
+    linkedin: "https://www.linkedin.com/in/sumit-kumawat",
     github: "https://github.com/sumit-kumawat",
+    instagram: "https://www.instagram.com/sumit__kumawat",
+    facebook: "https://www.facebook.com/SumitKumawat09",
+    twitter: "https://x.com/sumit__kumawat",
     imageUrl: "https://cdn.conzex.com/files/profile-icon/1721097078045.jpeg",
     cvUrl: "https://sumitkumawat.com/Sumit_Kumawat_CV.pdf",
     summary: "Senior IT Infrastructure & Cybersecurity Engineer with extensive virtualization experience and a proven track record in designing cloud solutions. Expert in managing Microsoft Windows Server ecosystems (2012–2025), Microsoft Exchange 2016, and complex shared network storage environments. Proficient in VMware, KVM, and open-source technologies, delivering comprehensive upgrades and optimization for diverse application landscapes.",
@@ -36,6 +39,9 @@ export const Icons = {
   Location: SkillIcons.Icons8Location,
   LinkedIn: SkillIcons.Icons8LinkedIn,
   GitHub: SkillIcons.Icons8GitHub,
+  Instagram: SkillIcons.Icons8Instagram,
+  Facebook: SkillIcons.Icons8Facebook,
+  Twitter: SkillIcons.Icons8Twitter,
 };
 
 
@@ -78,8 +84,7 @@ export const skillCategories: SkillCategory[] = [
             { name: "Python", icon: SkillIcons.Python },
             { name: "Bash Scripting", icon: SkillIcons.Bash },
             { name: "PowerShell", icon: SkillIcons.PowerShell },
-            { name: "Docker", icon: SkillIcons.Docker },
-            { name: "VS Code", icon: SkillIcons.Code }
+            { name: "Docker", icon: SkillIcons.Docker }
         ],
     },
 ];
