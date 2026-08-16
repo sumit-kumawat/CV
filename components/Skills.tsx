@@ -1,53 +1,68 @@
-
 import React from 'react';
 import { skillCategories } from '../constants';
+import { Layers } from 'lucide-react';
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-24 bg-neutral-50 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
-        <div 
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-6xl font-bold text-neutral-900 mb-4 tracking-tight">
+    <section id="skills" className="py-20 md:py-28 bg-neutral-50/80 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        
+        {/* Header */}
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-primary/10 rounded-full border border-primary/20 text-xs md:text-sm font-bold text-primary mb-4">
+            <Layers className="w-4 h-4" />
+            <span className="uppercase tracking-wider">Core Competencies</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-4 tracking-tight">
             Technical Expertise
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-            A diverse arsenal of industry-standard technologies and official applications I employ to optimize infrastructure, reduce risk, and drive operational improvements.
+          <p className="text-neutral-600 text-sm sm:text-base md:text-lg leading-relaxed">
+            Enterprise-grade technologies and platforms leveraged to design resilient virtualized environments, automate cloud workflows, and harden security postures.
           </p>
         </div>
 
-        <div className="space-y-16">
-            {skillCategories.map((category) => (
-              <div 
-                key={category.title}
-                className="bg-white/60 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-8 md:p-12 relative overflow-hidden group"
-              >
-                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500"></div>
-                
-                <div className="mb-10 border-l-8 border-primary pl-6">
-                  <h3 className="text-3xl font-bold text-neutral-800 mb-2">{category.title}</h3>
-                  <p className="text-neutral-500 text-lg">{category.description}</p>
+        {/* Categories Grid */}
+        <div className="space-y-12 max-w-7xl mx-auto">
+          {skillCategories.map((category) => (
+            <div 
+              key={category.title}
+              className="bg-white rounded-3xl border border-neutral-200/90 p-6 sm:p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+            >
+              {/* Category Header with Accent */}
+              <div className="mb-8 pb-4 border-b border-neutral-100 flex flex-col md:flex-row md:items-center justify-between gap-3">
+                <div className="border-l-4 border-primary pl-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 tracking-tight">
+                    {category.title}
+                  </h3>
+                  <p className="text-neutral-500 text-xs sm:text-sm mt-1">
+                    {category.description}
+                  </p>
                 </div>
-                
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
-                  {category.skills.map((skill) => (
-                    <div 
-                      key={skill.name}
-                      className="group flex flex-col items-center p-6 rounded-2xl bg-neutral-50/50 border border-neutral-100/50 hover:bg-white hover:shadow-2xl hover:border-primary/20 transition-all duration-300 cursor-default"
-                    >
-                      <div className="w-16 h-16 mb-4 flex items-center justify-center filter drop-shadow-lg group-hover:drop-shadow-2xl transition-all duration-300">
-                         <skill.icon className="w-full h-full object-contain" />
-                      </div>
-                      <span className="font-semibold text-neutral-700 text-sm text-center group-hover:text-primary transition-colors">
-                        {skill.name}
-                      </span>
-                    </div>
-                  ))}
+                <div className="shrink-0 text-xs font-semibold text-neutral-400">
+                  {category.skills.length} Technologies
                 </div>
               </div>
-            ))}
+              
+              {/* Skills Tiles */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
+                {category.skills.map((skill) => (
+                  <div 
+                    key={skill.name}
+                    className="group flex flex-col items-center justify-center p-3.5 sm:p-4 rounded-2xl bg-neutral-50/70 border border-neutral-200/70 hover:bg-white hover:border-primary/40 hover:shadow-md transition-all duration-200 cursor-default"
+                  >
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 mb-3 flex items-center justify-center filter drop-shadow-sm group-hover:scale-110 transition-transform duration-200">
+                      <skill.icon className="w-full h-full object-contain" />
+                    </div>
+                    <span className="font-semibold text-neutral-800 text-xs sm:text-[13px] text-center group-hover:text-primary transition-colors leading-tight">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   );

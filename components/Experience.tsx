@@ -1,69 +1,174 @@
-
 import React from 'react';
 import Section from './Section';
 import { experience } from '../constants';
-import { Icons8Work } from './SkillIcons';
+import { Briefcase, Calendar, MapPin, CheckCircle2, Building2, TrendingUp, ShieldCheck, Server, Sparkles, Activity } from 'lucide-react';
 
 const Experience: React.FC = () => {
   return (
-    <Section id="experience" title="Professional Experience" className="bg-neutral-50/50 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="relative">
-          {/* Central Timeline Line */}
-          <div className="absolute top-0 bottom-0 left-8 md:left-1/2 w-1 bg-gradient-to-b from-primary/0 via-primary/30 to-primary/0 md:transform md:-translate-x-1/2"></div>
+    <Section id="experience" title="Professional Experience" className="bg-neutral-50/60 relative overflow-hidden">
+      <div className="max-w-5xl mx-auto relative z-10">
+        
+        {/* Intro subtitle - Centered */}
+        <div className="mb-12 text-center">
+          <p className="text-neutral-600 text-base sm:text-lg max-w-2xl mx-auto text-center leading-relaxed font-normal">
+            Track record of designing resilient data-center architectures, orchestrating hybrid cloud environments, and eliminating manual operational overhead through automation.
+          </p>
+        </div>
+
+        {/* Live Animated Timeline Container */}
+        <div className="relative pl-6 sm:pl-10 md:pl-12 space-y-12">
           
-          <div className="space-y-24">
-            {experience.map((item, index) => (
+          {/* Animated Vertical Line: Gradient background + Travelling pulse wave */}
+          <div 
+            className="absolute top-6 bottom-6 left-6 sm:left-10 md:left-12 w-1 -translate-x-1/2 bg-gradient-to-b from-primary via-primary/30 to-neutral-200 rounded-full" 
+            aria-hidden="true"
+          >
+            {/* Travelling Light Ray / Animated Pulse */}
+            <div className="w-full h-24 bg-gradient-to-b from-transparent via-primary to-transparent rounded-full animate-pulse opacity-80 shadow-xs" />
+          </div>
+
+          {experience.map((item, index) => {
+            const isCurrent = index === 0;
+
+            return (
               <div 
-                key={index}
-                className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center w-full group`}
+                key={index} 
+                className="relative flex items-start group"
               >
-                
-                {/* Timeline Icon Marker */}
+                {/* Live Animated Node Marker on the Line */}
                 <div 
-                  className="absolute left-8 md:left-1/2 w-16 h-16 bg-white border-4 border-primary/20 rounded-2xl shadow-2xl flex items-center justify-center transform -translate-x-1/2 md:translate-x-[-50%] z-20 group-hover:border-primary transition-colors duration-300"
+                  className={`absolute -left-6 sm:-left-10 md:-left-12 w-10 h-10 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center -translate-x-1/2 z-20 transition-all duration-300 shadow-md ${
+                    isCurrent 
+                      ? 'bg-primary text-white ring-4 ring-primary/20 shadow-primary/30 scale-105' 
+                      : 'bg-white text-neutral-600 border-2 border-neutral-300 group-hover:border-primary group-hover:text-primary group-hover:scale-105'
+                  }`}
                 >
-                    <Icons8Work className="w-8 h-8" />
-                </div>
-
-                {/* Date/Location Tag - Mobile: Top, Desktop: Opposite side */}
-                <div className={`w-full md:w-1/2 pl-24 md:pl-0 md:px-16 mb-6 md:mb-0 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'} text-left`}>
-                    <div 
-                      className={`inline-block px-6 py-2 bg-primary/10 text-primary rounded-full text-sm font-bold tracking-widest uppercase shadow-sm border border-primary/20`}
-                    >
-                        {item.period}
+                  {isCurrent ? (
+                    <div className="relative flex items-center justify-center">
+                      <Briefcase className="w-5 h-5 relative z-10" />
+                      <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 border-2 border-white"></span>
+                      </span>
                     </div>
+                  ) : (
+                    <Building2 className="w-5 h-5" />
+                  )}
                 </div>
 
-                {/* Content Card */}
-                <div className="w-full md:w-1/2 pl-24 md:pl-0 md:px-16">
-                   <div 
-                     className="bg-white/40 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-2xl border border-white/30 hover:shadow-primary/10 transition-all duration-500 relative overflow-hidden group-hover:border-primary/20"
-                   >
-                      {/* Decorative gradient blob */}
-                      <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500"></div>
+                {/* Experience Card */}
+                <div className="w-full ml-6 sm:ml-8">
+                  <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-9 border border-neutral-200/90 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 relative overflow-hidden">
+                    
+                    {/* Top Accent line */}
+                    {isCurrent ? (
+                      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-emerald-500 to-primary"></div>
+                    ) : (
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-neutral-200 group-hover:bg-primary/50 transition-colors"></div>
+                    )}
 
-                      <h3 className="text-3xl font-bold text-neutral-900 mb-2 tracking-tight">{item.role}</h3>
-                      <div className="flex flex-wrap items-center gap-3 mb-8">
-                        <span className="text-xl font-semibold text-primary">{item.company}</span>
-                        <span className="w-2 h-2 rounded-full bg-neutral-300 hidden sm:block"></span>
-                        <span className="text-base text-neutral-500 font-medium">{item.location}</span>
+                    {/* Header: Role, Company, Period, Location */}
+                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-neutral-100 mb-6">
+                      <div>
+                        <div className="flex flex-wrap items-center gap-2.5 mb-2">
+                          <h3 className="text-xl sm:text-2xl font-black text-neutral-900 tracking-tight">
+                            {item.role}
+                          </h3>
+                          {isCurrent && (
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 font-bold text-xs rounded-full border border-emerald-200 shadow-xs">
+                              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                              <span>Active Role</span>
+                            </span>
+                          )}
+                        </div>
+
+                        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-neutral-600 text-sm">
+                          <span className="font-bold text-primary flex items-center gap-1.5">
+                            <Building2 className="w-4 h-4 text-primary" />
+                            {item.company}
+                          </span>
+                          <span className="text-neutral-300 hidden sm:inline">•</span>
+                          <span className="flex items-center gap-1 text-neutral-500 font-medium text-xs sm:text-sm">
+                            <MapPin className="w-3.5 h-3.5 text-neutral-400" />
+                            {item.location}
+                          </span>
+                        </div>
                       </div>
-                      
-                      <ul className="space-y-5">
+
+                      {/* Period Badge */}
+                      <div className="shrink-0">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-neutral-100/80 text-neutral-800 text-xs sm:text-sm font-semibold rounded-xl border border-neutral-200">
+                          <Calendar className="w-4 h-4 text-primary" />
+                          <span>{item.period}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Key Responsibilities */}
+                    <div className="space-y-3.5">
+                      <div className="text-xs uppercase tracking-wider text-neutral-400 font-bold flex items-center gap-1.5">
+                        <Activity className="w-3.5 h-3.5 text-primary" />
+                        <span>Core Deliverables & Operational Impact</span>
+                      </div>
+
+                      <ul className="space-y-2.5">
                         {item.points.map((point, pIndex) => (
-                          <li key={pIndex} className="flex items-start gap-4 text-neutral-600 leading-relaxed text-base group/item">
-                            <span className="flex-shrink-0 mt-2 w-2 h-2 bg-primary rounded-full ring-4 ring-primary/10 group-hover/item:scale-125 transition-transform"></span>
-                            <span className="group-hover/item:text-neutral-900 transition-colors">{point}</span>
+                          <li key={pIndex} className="flex items-start gap-3 group/item">
+                            <div className="mt-1 shrink-0">
+                              <CheckCircle2 className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="text-neutral-700 text-sm sm:text-[15px] leading-relaxed group-hover/item:text-neutral-900 transition-colors">
+                              {point}
+                            </span>
                           </li>
                         ))}
                       </ul>
-                   </div>
+                    </div>
+
+                    {/* Metric Highlights Footer */}
+                    <div className="mt-6 pt-5 border-t border-neutral-100 flex flex-wrap items-center gap-2.5">
+                      {isCurrent ? (
+                        <>
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary font-bold text-xs rounded-lg border border-primary/20">
+                            <TrendingUp className="w-3.5 h-3.5" />
+                            <span>50%+ Manual Effort Saved</span>
+                          </div>
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary font-bold text-xs rounded-lg border border-primary/20">
+                            <ShieldCheck className="w-3.5 h-3.5" />
+                            <span>182+ Hardened Server Upgrades</span>
+                          </div>
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-neutral-100 text-neutral-700 font-medium text-xs rounded-lg border border-neutral-200">
+                            <Server className="w-3.5 h-3.5 text-neutral-500" />
+                            <span>Hybrid Cloud & DC Scale</span>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-neutral-100 text-neutral-700 font-bold text-xs rounded-lg border border-neutral-200">
+                            <ShieldCheck className="w-3.5 h-3.5 text-primary" />
+                            <span>100% Patch Compliance</span>
+                          </div>
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-neutral-100 text-neutral-700 font-medium text-xs rounded-lg border border-neutral-200">
+                            <Server className="w-3.5 h-3.5 text-neutral-500" />
+                            <span>Hyper-V & KVM Clusters</span>
+                          </div>
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-neutral-100 text-neutral-700 font-medium text-xs rounded-lg border border-neutral-200">
+                            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                            <span>24/7 SLA Uptime</span>
+                          </div>
+                        </>
+                      )}
+                    </div>
+
+                  </div>
                 </div>
+
               </div>
-            ))}
-          </div>
+            );
+          })}
+
         </div>
+
       </div>
     </Section>
   );

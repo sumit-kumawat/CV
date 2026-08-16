@@ -31,8 +31,12 @@ export interface EducationItem {
 
 export interface Project {
   title: string;
+  repoName: string;
+  category: string;
   description: string;
-  tags: string[];
+  techStack: string[];
+  githubUrl: string;
+  highlights: string[];
   icon: React.FC<{ className?: string }>;
 }
 
@@ -40,4 +44,8 @@ export interface Certification {
   title: string;
   issuer: string;
   year: number | string;
+  credentialId?: string;
+  domain?: string;
+  badgeUrl?: string;
 }
+
